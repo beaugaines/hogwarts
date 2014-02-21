@@ -1,10 +1,9 @@
-class CreateStudentsTable < ActiveRecord::Migration
-  def up
+class CreateStudents < ActiveRecord::Migration
+  def change
     create_table :students do |t|
-      t.name :string
-    end
-  end
+      t.string :name, null: false
 
-  def down
+      t.timestamps
+    end
   end
 end

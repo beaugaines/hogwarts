@@ -1,11 +1,11 @@
-class CreateHousesTable < ActiveRecord::Migration
-  def up
-    create_table :house do
-      t.string :name
-      t.references :students
-    end
-  end
+class CreateHouses < ActiveRecord::Migration
+  def change
+    create_table :houses do |t|
+      t.string :name, null: false
+      t.references :student
 
-  def down
+      t.timestamps
+    end
+    add_index :houses, :student_id
   end
 end
