@@ -15,6 +15,5 @@ gem 'jquery-rails'
 group :development do
   gem 'quiet_assets'
   gem 'ffaker'
-  gem 'rails_best_practices'
   gem 'pry-rails'
 end

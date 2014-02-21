@@ -26,4 +26,6 @@ ActiveRecord::Schema.define(:version => 20130710032742) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "students", ["house_id"], :name => "index_students_on_house_id"
+
 end
