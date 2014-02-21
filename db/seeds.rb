@@ -10,9 +10,10 @@
 House.destroy_all
 Student.destroy_all
 
-rand(10..15).times do
+4.times do
   h = House.create(name: Faker::DizzleIpsum.word.titleize)
-  rand(5..10).times do
-    h.students.create(name: Faker::Name.name)
-  end
+end
+
+20.times do
+  Student.create(name: Faker::Name.name)
 end

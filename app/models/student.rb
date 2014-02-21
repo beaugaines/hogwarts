@@ -1,4 +1,14 @@
 class Student < ActiveRecord::Base
   attr_accessible :name, :house_id
   belongs_to :house
+
+  after_create :assign_house
+
+  private
+
+  def assign_house
+    self.house_id = House.all.sample.id
+    save!
+  end
+  
 end
