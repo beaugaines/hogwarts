@@ -1,6 +1,7 @@
 <%= @house.name %>
 <ul>
 <% @house.students.each do |student| %>
-  <li><%= student.name %></li>
+  <li><%= link_to student.name, student %></li>
 <% end %>
 </ul>
+<%= link_to 'View houses', houses_path %>
