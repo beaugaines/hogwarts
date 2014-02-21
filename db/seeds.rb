@@ -6,9 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-House.create(name: 'Bungalow')
-House.create(name: 'Condo')
-House.create(name: 'Teepee')
 
-Student.create(name: 'Bob Dobbs')
-Student.create(name: 'Dob Bobbs')
+House.destroy_all
+Student.destroy_all
+
+rand(10..15).times do
+  h = House.create(name: Faker::DizzleIpsum.word.titleize)
+  rand(5..10).times do
+    h.students.create(name: Faker::Name.name)
+  end
+end

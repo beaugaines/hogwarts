@@ -15,15 +15,13 @@ ActiveRecord::Schema.define(:version => 20130710032742) do
 
   create_table "houses", :force => true do |t|
     t.string   "name",       :null => false
-    t.integer  "student_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "houses", ["student_id"], :name => "index_houses_on_student_id"
-
   create_table "students", :force => true do |t|
     t.string   "name",       :null => false
+    t.integer  "house_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
