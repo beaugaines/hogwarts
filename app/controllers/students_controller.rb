@@ -8,9 +8,16 @@ class StudentsController < ApplicationController
   end
 
   def new
-    new_student = Student.new(params[:id])
-    
-    house << student
-    redirect_to students_path
+    @student = Student.new
   end
+
+  def create
+    @student = Student.new(params[:student])
+    if @student.save
+      redirect_to root_path, notice: 'Student saved'
+    else
+      render :new, alert: 'Record could not be saved; try again'
+    end
+  end
+  
 end
