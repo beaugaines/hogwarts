@@ -12,4 +12,5 @@ end
 
 gem 'jquery-rails'
 gem 'quiet_assets'
+gem 'pry-rails'
 
