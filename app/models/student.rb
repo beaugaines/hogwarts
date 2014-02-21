@@ -11,5 +11,5 @@ class Student < ActiveRecord::Base
     self.house_id = House.all.sample.id
     save!
   end
-  
+ 
 end

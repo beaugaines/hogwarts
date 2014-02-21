@@ -19,5 +19,5 @@ class StudentsController < ApplicationController
       render :new, alert: 'Record could not be saved; try again'
     end
   end
-  
+
 end
