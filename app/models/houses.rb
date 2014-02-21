@@ -1,3 +1,3 @@
-class Houses < ActiveRecord
-  attr_accessor :house_name
+class House < ActiveRecord::Base
+  attr_accessible :name
 end
